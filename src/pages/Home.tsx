@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {
-  IonContent, IonHeader, IonPage, IonToolbar,
-  IonSearchbar, IonGrid, IonRow, IonCol, IonAvatar
+  IonContent, IonHeader, IonPage, IonToolbar, IonSearchbar,
+  IonGrid, IonRow, IonCol, IonAvatar, IonIcon
 } from '@ionic/react';
+import { playCircleOutline, starOutline } from 'ionicons/icons';
 import './Home.css';
 
 export default class Home extends Component<{}, { searchText: string }> {
@@ -42,7 +43,21 @@ export default class Home extends Component<{}, { searchText: string }> {
                     onIonChange={e => this.setSearchText(e.detail.value!)}
                     placeholder="Search Twitter"
                     animated
-                    className="placeholder"
+                    className="placeholder ion-text-center"
+                  />
+                </IonCol>
+                <IonCol size="1" className="ion-text-center">
+                  <IonIcon
+                    id="toolbar-icons-right1"
+                    icon={playCircleOutline}
+                    color="secondary"
+                  />
+                </IonCol>
+                <IonCol size="1" className="ion-text-center">
+                  <IonIcon
+                    id="toolbar-icons-right2"
+                    icon={starOutline}
+                    color="secondary"
                   />
                 </IonCol>
               </IonRow>

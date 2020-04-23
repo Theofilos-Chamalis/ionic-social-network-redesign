@@ -3,3 +3,17 @@ ion-avatar {
     height: 40px;
     padding-bottom: 2px;
 }
+
+#toolbar-icons-right1 {
+    margin-top: 6px;
+    padding-right: 8px;
+    margin-left: -6px;
+    font-size: 24px;
+}
+
+#toolbar-icons-right2 {
+    margin-top: 6px;
+    padding-right: 6px;
+    margin-left: -6px;
+    font-size: 24px;
+}
