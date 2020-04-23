@@ -31,7 +31,7 @@ export default class HomeTabBar extends Component<{}, { selectedTab: number }> {
                     <Route path="/mail" component={Mail} exact={true} />
                     <Route path="/notifications" component={Notifications} exact={true} />
                 </IonRouterOutlet>
-                <IonTabBar slot="bottom">
+                <IonTabBar slot="bottom" mode="md">
                     <IonTabButton tab="home" onClick={() => this.selectTab(1)} href="/home">
                         <IonIcon icon={this.state.selectedTab === 1 ? home : homeOutline} color={this.state.selectedTab === 1 ? "primary" : "black"} />
                         <IonLabel color={this.state.selectedTab === 1 ? "primary" : "black"}>Home</IonLabel>

@@ -24,7 +24,7 @@ export default class Home extends Component<{}, { searchText: string }> {
   render() {
     return (
       <IonPage>
-        <IonHeader>
+        <IonHeader mode="ios" collapse="condense">
           <IonToolbar>
             <IonGrid className="ion-no-padding ion-padding-top">
               <IonRow>
