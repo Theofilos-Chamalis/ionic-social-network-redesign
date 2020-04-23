@@ -43,7 +43,8 @@ export default class Home extends Component<{}, { searchText: string }> {
                     onIonChange={e => this.setSearchText(e.detail.value!)}
                     placeholder="Search Twitter"
                     animated
-                    className="placeholder ion-text-center"
+                    className="placeholder"
+                    inputMode="text"
                   />
                 </IonCol>
                 <IonCol size="1" className="ion-text-center">
