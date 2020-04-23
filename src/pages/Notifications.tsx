@@ -11,7 +11,7 @@ export default class Notifications extends Component<{}, {}> {
   render() {
     return (
       <IonPage>
-        <IonHeader>
+        <IonHeader mode="md">
           <IonToolbar>
             <IonTitle>Notifications</IonTitle>
           </IonToolbar>

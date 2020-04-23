@@ -11,7 +11,7 @@ export default class Mail extends Component<{}, {}> {
   render() {
     return (
       <IonPage>
-        <IonHeader>
+        <IonHeader mode="md">
           <IonToolbar>
             <IonTitle>Mail</IonTitle>
           </IonToolbar>

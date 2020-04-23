@@ -11,7 +11,7 @@ export default class News extends Component<{}, {}> {
   render() {
     return (
       <IonPage>
-        <IonHeader>
+        <IonHeader mode="md">
           <IonToolbar>
             <IonTitle>News</IonTitle>
           </IonToolbar>
