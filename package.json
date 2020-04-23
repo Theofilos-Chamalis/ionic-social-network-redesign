@@ -27,7 +27,14 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "ionic serve",
+    "android": "ionic cap run android",
+    "android_build": "ionic cap sync android",
+    "ios": "ionic cap run ios",
+    "ios_build": "ionic cap sync ios",
+    "capacitor_build": "ionic cap build",
+    "capacitor_add_integration": "ionic integrations enable capacitor"
   },
   "eslintConfig": {
     "extends": "react-app"
