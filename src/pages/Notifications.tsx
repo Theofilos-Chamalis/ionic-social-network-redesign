@@ -17,12 +17,6 @@ export default class Notifications extends Component<{}, {}> {
           </IonToolbar>
         </IonHeader>
         <IonContent>
-          <IonHeader collapse="condense">
-            <IonToolbar>
-              <IonTitle size="large">Notifications</IonTitle>
-            </IonToolbar>
-          </IonHeader>
-
 
         </IonContent>
       </IonPage>

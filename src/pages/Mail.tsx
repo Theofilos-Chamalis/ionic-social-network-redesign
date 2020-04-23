@@ -17,12 +17,6 @@ export default class Mail extends Component<{}, {}> {
           </IonToolbar>
         </IonHeader>
         <IonContent>
-          <IonHeader collapse="condense">
-            <IonToolbar>
-              <IonTitle size="large">Mail</IonTitle>
-            </IonToolbar>
-          </IonHeader>
-
 
         </IonContent>
       </IonPage>

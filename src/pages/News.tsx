@@ -17,12 +17,6 @@ export default class News extends Component<{}, {}> {
           </IonToolbar>
         </IonHeader>
         <IonContent>
-          <IonHeader collapse="condense">
-            <IonToolbar>
-              <IonTitle size="large">News</IonTitle>
-            </IonToolbar>
-          </IonHeader>
-
 
         </IonContent>
       </IonPage>
