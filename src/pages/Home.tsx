@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import {
   IonContent, IonHeader, IonPage, IonToolbar, IonSearchbar,
-  IonAvatar, IonIcon, IonButton, IonButtons
+  IonAvatar, IonIcon, IonButton, IonButtons,
 } from '@ionic/react';
 import { playCircleOutline, starOutline } from 'ionicons/icons';
 import './Home.css';
+import TweetList from '../components/TweetList';
 
 export default class Home extends Component<{}, { searchText: string }> {
   constructor(props: any) {
@@ -56,7 +57,7 @@ export default class Home extends Component<{}, { searchText: string }> {
           </IonToolbar>
         </IonHeader>
         <IonContent>
-
+          <TweetList />
         </IonContent>
       </IonPage>
     );
