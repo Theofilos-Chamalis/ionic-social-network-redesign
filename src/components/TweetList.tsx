@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { IonList, IonListHeader, IonLabel, IonButton } from '@ionic/react';
+import axios from 'axios';
 import TweetCard from './TweetCard';
 
 export default class TweetList extends Component<{}, { loremIpsumTexts: Array<string>, loremIpsumTextNumber: number }> {
@@ -18,9 +19,12 @@ export default class TweetList extends Component<{}, { loremIpsumTexts: Array<st
         }
     };
 
-    generateLoremIpsum = () => {
-        const loremText = 'random text lalala';
-        this.state.loremIpsumTexts.push(loremText);
+    generateLoremIpsum = async () => {
+        const res = await axios.get("https://baconipsum.com/api/?type=all-meat&sentences=2&start-with-lorem=2");
+        const loremText = res?.data[0];
+        this.setState({
+            loremIpsumTexts: [...this.state.loremIpsumTexts, loremText]
+        });
     };
 
     render() {
@@ -42,7 +46,21 @@ export default class TweetList extends Component<{}, { loremIpsumTexts: Array<st
                     cardSubtitle="none"
                     cardBodyImage="https://picsum.photos/400"
                     cardBodyText="This is the first photo I have taken !!!"
-                    cardTimestamp="Sent at 09:30"
+                    cardTimestamp="Sent at 14:19"
+                />
+                <TweetCard
+                    cardTitle="Gerard Du Pardieu"
+                    cardSubtitle="Ruski"
+                    cardBodyImage="https://picsum.photos/420"
+                    cardBodyText={this.state.loremIpsumTexts.length > 0 ? this.state.loremIpsumTexts[0] : "Je ne pais patisserie"}
+                    cardTimestamp="Sent at 16:38"
+                />
+                <TweetCard
+                    cardTitle="Kastorikos"
+                    cardSubtitle="Chef"
+                    cardBodyImage="https://picsum.photos/410"
+                    cardBodyText={this.state.loremIpsumTexts.length > 0 ? this.state.loremIpsumTexts[1] : "Oui bebe oui"}
+                    cardTimestamp="Sent at 16:51"
                 />
             </IonList>
         );
