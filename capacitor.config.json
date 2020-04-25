@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "Twitter Redesign",
+  "appId": "ionic-social-network-redesign",
+  "appName": "Ionic Social Network Redesign",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "build",
