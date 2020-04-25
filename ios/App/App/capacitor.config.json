@@ -1,0 +1,8 @@
+{
+  "appId": "theofilos.chamalis.ionicsocialnetworkredesign",
+  "appName": "Ionic Social Network Redesign",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "cordova": {}
+}
