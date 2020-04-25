@@ -1,6 +1,6 @@
 ion-img { 
     border-radius: 10px !important;
     overflow: hidden;
-    height: 150px;
+    height: 180px;
     object-fit: cover;
 }
