@@ -9,7 +9,7 @@ export default class TweetList extends Component<{}, { loremIpsumTexts: Array<st
 
         this.state = {
             loremIpsumTexts: [],
-            loremIpsumTextNumber: 2
+            loremIpsumTextNumber: 3
         }
     }
 
@@ -41,6 +41,7 @@ export default class TweetList extends Component<{}, { loremIpsumTexts: Array<st
                                 cardTitle="John Travolta"
                                 cardSubtitle="Fisherman"
                                 cardBodyImage="none"
+                                cardBodyChart={false}
                                 cardBodyText="This is my first tweet! Please do not reply to me before 15:30 since I will be on the lake fishing :("
                                 cardTimestamp="Sent at 09:30"
                             />
@@ -48,22 +49,33 @@ export default class TweetList extends Component<{}, { loremIpsumTexts: Array<st
                                 cardTitle="Jimmy Falon"
                                 cardSubtitle="none"
                                 cardBodyImage="https://picsum.photos/600"
+                                cardBodyChart={false}
                                 cardBodyText="This is the first photo I have taken !!!"
                                 cardTimestamp="Sent at 14:19"
                             />
                             <TweetCard
                                 cardTitle="Gerard Du Pardieu"
                                 cardSubtitle="Ruski"
-                                cardBodyImage="https://picsum.photos/620"
-                                cardBodyText={this.state.loremIpsumTexts.length > 0 ? this.state.loremIpsumTexts[0] : "Je ne pais patisserie"}
+                                cardBodyImage="https://picsum.photos/610"
+                                cardBodyChart={false}
+                                cardBodyText={this.state.loremIpsumTexts.length > 0 ? this.state.loremIpsumTexts[0] : "I am in Russia!"}
                                 cardTimestamp="Sent at 16:38"
                             />
                             <TweetCard
-                                cardTitle="Kastorikos"
+                                cardTitle="Jamie Oliver"
                                 cardSubtitle="Chef"
-                                cardBodyImage="https://picsum.photos/610"
-                                cardBodyText={this.state.loremIpsumTexts.length > 0 ? this.state.loremIpsumTexts[1] : "Oui bebe oui"}
+                                cardBodyImage="https://picsum.photos/620"
+                                cardBodyChart={false}
+                                cardBodyText={this.state.loremIpsumTexts.length > 0 ? this.state.loremIpsumTexts[1] : "Je ne pais patisserie"}
                                 cardTimestamp="Sent at 16:51"
+                            />
+                            <TweetCard
+                                cardTitle="Tweet Stats"
+                                cardSubtitle="2019-2020"
+                                cardBodyImage="none"
+                                cardBodyChart={true}
+                                cardBodyText="none"
+                                cardTimestamp="Sent at 17:13"
                             />
                         </IonList>
                     </IonCol>

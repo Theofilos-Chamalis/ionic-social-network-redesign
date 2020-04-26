@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import { IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonText, IonLabel, IonImg } from '@ionic/react';
 import './TweetCard.css'
+import TweetsPerMonthChart from './TweetsPerMonthChart';
 
-export default class TweetCard extends Component<{ cardTitle: string, cardSubtitle: string | 'none', cardBodyImage: string | 'none', cardBodyText: string | 'none', cardTimestamp: string | 'none' }, {}> {
+export default class TweetCard extends Component<{ cardTitle: string, cardSubtitle: string | 'none', cardBodyImage: string | 'none', cardBodyText: string | 'none', cardBodyChart: boolean, cardTimestamp: string | 'none' }, {}> {
     constructor(props: any) {
         super(props)
 
         this.state = {}
+    }
+
+    hasChart = (propToCheck: boolean) => {
+        return propToCheck;
     }
 
     isNone = (propToCheck: string) => {
@@ -27,6 +32,10 @@ export default class TweetCard extends Component<{ cardTitle: string, cardSubtit
                 <IonCardContent>
                     {this.isNone(this.props.cardBodyImage) ?
                         <IonImg src={this.props.cardBodyImage} className="ion-margin-bottom" /> :
+                        null
+                    }
+                    {this.hasChart(this.props.cardBodyChart) ?
+                        <TweetsPerMonthChart /> :
                         null
                     }
                     <IonText>{this.isNone(this.props.cardBodyText)}</IonText>
